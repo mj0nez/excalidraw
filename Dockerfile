@@ -1,4 +1,4 @@
-FROM --platform=${BUILDPLATFORM} node:22 AS build
+FROM --platform=${BUILDPLATFORM} node:24 AS build
 
 WORKDIR /opt/node_app
 
