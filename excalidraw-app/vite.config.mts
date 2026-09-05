@@ -102,6 +102,10 @@ export default defineConfig(({ mode }) => {
               // Taking the substring after "locales/"
               return `locales/${id.substring(index + 8)}`;
             }
+
+            if (id.includes("@excalidraw/mermaid-to-excalidraw")) {
+              return "mermaid-to-excalidraw";
+            }
           },
         },
       },
@@ -197,6 +201,7 @@ export default defineConfig(({ mode }) => {
               },
             },
           ],
+          maximumFileSizeToCacheInBytes: 2.3 * 1024 ** 2, // 2.3MB
         },
         manifest: {
           short_name: "Excalidraw",
